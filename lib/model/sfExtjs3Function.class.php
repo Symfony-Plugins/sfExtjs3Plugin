@@ -1,7 +1,7 @@
 <?php
 /**
  * sfExtjs3Function
- * 
+ *
  * Instances of this class can render themself as JavaScript functions
  *
  */
@@ -10,12 +10,12 @@ class sfExtjs3Function
   protected
    $arguments,
    $content;
-   
+
   /**
    * Creates a new JsObject
    *
-   * @param array $arguments    
-   * @param string $content     
+   * @param array $arguments  the arguments that this functions should accept
+   * @param mixed $content    anything that can be rendered as a string (arrays will be imploded)
    */
   public function __construct($arguments, $content)
   {
@@ -23,11 +23,11 @@ class sfExtjs3Function
     {
       throw new Exception('arguments should be an array');
     }
-  	
+
   	$this->arguments = $arguments;
   	$this->content   = $content;
   }
-  
+
   /**
    * Renders this function as a js-text
    *
@@ -35,19 +35,31 @@ class sfExtjs3Function
    */
   public function render()
   {
+    $content = $this->content;
+
+    // convert array to string by imploding it
+    if (is_array($content))
+    {
+      $content = implode("\n", $content);
+    }
+
   	$js  = 'function(';
-  	
   	$js .= implode(', ', $this->arguments);
-  	
   	$js .= ') {';
-  	
-  	$js .= $this->content; 
-  	
+  	if ($content)
+  	{
+  	  $js .= "\n";
+  	}
+  	$js .= $content;
+      if ($content)
+    {
+      $js .= "\n";
+    }
   	$js .= '}';
-  	
+
   	return $js;
   }
-  
+
   /**
    * @see render()
    */
@@ -55,7 +67,7 @@ class sfExtjs3Function
   {
   	return $this->render();
   }
-  
+
 }
 
 ?>
