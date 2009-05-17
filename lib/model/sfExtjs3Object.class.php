@@ -34,6 +34,17 @@ class sfExtjs3Object
 		{
 			$this->addFunction($functionName, $function);
 		}
+		
+		$this->configure();
+	}
+	
+	/**
+	 * The configure function can be defined in extensions of this class
+	 *
+	 */
+	public function configure()
+	{
+		
 	}
 
 	public function getFunctions()
