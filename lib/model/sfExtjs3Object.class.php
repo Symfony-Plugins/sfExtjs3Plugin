@@ -113,7 +113,8 @@ class sfExtjs3Object
   }
 
   /**
-   * Renders the calling of a function for this object
+   * Renders the calling of a function for this object (NOT INSTANCE)!
+   * The result of this function will contain the complete object name (not this.)
    *
    * @param string $functionName the function name (can be dotted for example to call superclass functions)
    * @param array $arguments     the arguments that are called for this function
@@ -131,6 +132,27 @@ class sfExtjs3Object
     $js .= ')';
 
     return $js;
+  }
+  
+  /**
+   * Renders the calling of a local function for an instance
+   *
+   * @param string $functionName the function name (can be dotted for example to call the functions of properties)
+   * @param array $arguments     the arguments that are called for this function
+   * @return string              the function call (preceded with this.)
+   */
+  protected function renderFunctionCallThis($functionName, $arguments = array())
+  {
+    if (!is_array($arguments))
+    {
+      throw new Exception('arguments should be an array');
+    }
+
+    $js  = 'this.'.$functionName.'(';
+    $js .= implode(', ', $arguments);
+    $js .= ')';
+      	
+  	return $js;
   }
 
   /**
