@@ -6,7 +6,12 @@ Write ExtJS3.0.0 code in PHP
 
 == Installation ==
 
-Installation is only available via SVN, due to the size of the ExtJS libraries.
+Installation is only available via SVN.'''
+Extjs libraries have been removed due to licensing concerns.'''
+To use, download the Extjs3 full package from www.extjs.com.'''
+Create an alias in your webserver config for folder /sfExtjs3.'''
+The folder the alias points to needs to contain 2 folders, "extjs" and "patches".'''
+Then extract theh Extjs3 package to the "extjs" folder.'''
 
 === Single Checkout ===
 Move into your project directory and issue the following command:
@@ -30,14 +35,6 @@ sfExtjs3Plugin http://svn.symfony-project.com/plugins/sfExtjs3Plugin/trunk/
 }}}
 
 This way, every time you use svn update, it will get the latest version of sfExtjs3Plugin from the symfony repository
-
-=== Create the link ===
-
-Go to your webdir symfonyproject/web
-
-{{{
-ln -s ../plugins/sfExtjs3Plugin/web/ sfExtjs3Plugin
-}}}
 
 == Usage - A short Tutorial ==
 === Preparation ===
@@ -484,7 +481,7 @@ http://www.symfony-project.org/forum/index.php/t/12399/
 
 == Notes ==
 
-This plugin is bundled with the final ExtJS 3.0.0 '''Use only with PHP 5.2.x and above!
+Use only with PHP 5.2.x and above!
 
 === !ToDo in this tutorial ===
  * Explain the Listener Methods
