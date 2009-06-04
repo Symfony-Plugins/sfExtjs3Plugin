@@ -948,6 +948,11 @@ class sfExtjs3Plugin {
       {
         return false;
       }
+      
+      if ($key == 'groupTextTpl')
+      {
+        return true;
+      }
     }
 
     foreach ($quoteExcept['value'] as $except)
