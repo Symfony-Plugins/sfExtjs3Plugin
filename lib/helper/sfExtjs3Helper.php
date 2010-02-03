@@ -89,8 +89,6 @@ class sfExtjs3Plugin {
                        'js' => array()); // current js addons
 
   static public function isAssoc($class, $arr){
-    
-    if(!is_array($class)) return false;
 
     // constructors which accept arrays only
     if (in_array($class, array('Ext.XTemplate'))) return false;
