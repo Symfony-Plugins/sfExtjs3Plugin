@@ -50,7 +50,7 @@ sfConfig::set('sf_extjs3_spacer', sfConfig::get('sf_extjs3_images_dir').'default
 #
 # attributes which must handled as array
 #
-sfConfig::set('sf_extjs3_list_attributes', array('items', 'tbar', 'bbar', 'buttons', 'plugins', 'view', 'fields', 'tools', 'actions'));
+sfConfig::set('sf_extjs3_list_attributes', array('items', 'tbar', 'bbar', 'buttons', 'plugins', 'view', 'fields', 'tools', 'actions', 'data'));
 #
 # array values that don't need quotes
 #
