@@ -36,6 +36,7 @@ sfConfig::set('sf_extjs3_themes',
     'gray' => array( 'xtheme-gray.css' )
   )
 );
+
 #
 # base directories
 #
@@ -93,11 +94,14 @@ sfConfig::set('sf_extjs3_classes',
     'FieldSet'                => 'Ext.form.FieldSet',
     'Hidden'                  => 'Ext.form.Hidden',
     'DateField'               => 'Ext.form.DateField',
+    'TwinDateField'           => 'Ext.ux.form.TwinDateField', // ux must be manually included
     'TextField'               => 'Ext.form.TextField',
     'TimeField'               => 'Ext.form.TimeField',
     'HtmlEditor'              => 'Ext.form.HtmlEditor',
     'ComboBox'                => 'Ext.form.ComboBox',
+    'TwinComboBox'            => 'Ext.ux.form.TwinComboBox', // ux must be manually included
     'Checkbox'                => 'Ext.form.Checkbox',
+    'MultiSelect'             => 'Ext.ux.form.MultiSelect', // ux must be manually included
     'Menu'                    => 'Ext.menu.Menu',
     'Item'	  		            => 'Ext.menu.Item',
     'TextItem'                => 'Ext.menu.TextItem',
@@ -319,6 +323,13 @@ sfConfig::set('Ext.form.DateField',
   )
 );
 
+sfConfig::set('Ext.ux.form.TwinDateField',
+  array(
+    'class'       => 'Ext.ux.form.TwinDateField',
+    'attributes'  => array()
+  )
+);
+
 sfConfig::set('Ext.form.TextField',
   array(
     'class'       => 'Ext.form.TextField',
@@ -343,6 +354,20 @@ sfConfig::set('Ext.form.HtmlEditor',
 sfConfig::set('Ext.form.ComboBox',
   array(
     'class'       => 'Ext.form.ComboBox',
+    'attributes'  => array()
+  )
+);
+
+sfConfig::set('Ext.ux.form.TwinComboBox',
+  array(
+    'class'       => 'Ext.ux.form.TwinComboBox',
+    'attributes'  => array()
+  )
+);
+
+sfConfig::set('Ext.ux.form.MultiSelect',
+  array(
+    'class'       => 'Ext.ux.form.MultiSelect',
     'attributes'  => array()
   )
 );
