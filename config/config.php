@@ -51,7 +51,7 @@ sfConfig::set('sf_extjs3_spacer', sfConfig::get('sf_extjs3_images_dir').'default
 #
 # attributes which must handled as array
 #
-sfConfig::set('sf_extjs3_list_attributes', array('items', 'tbar', 'bbar', 'buttons', 'plugins', 'view', 'fields', 'tools', 'actions', 'data'));
+sfConfig::set('sf_extjs3_list_attributes', array('items', 'tbar', 'bbar', 'buttons', 'plugins', 'view', 'fields', 'tools', 'actions', 'data', 'multiselects'));
 #
 # array values that don't need quotes
 #
@@ -102,6 +102,7 @@ sfConfig::set('sf_extjs3_classes',
     'TwinComboBox'            => 'Ext.ux.form.TwinComboBox', // ux must be manually included
     'Checkbox'                => 'Ext.form.Checkbox',
     'MultiSelect'             => 'Ext.ux.form.MultiSelect', // ux must be manually included
+    'ItemSelector'            => 'Ext.ux.form.ItemSelector', // ux must be manually included
     'Menu'                    => 'Ext.menu.Menu',
     'Item'	  		            => 'Ext.menu.Item',
     'TextItem'                => 'Ext.menu.TextItem',
@@ -368,6 +369,13 @@ sfConfig::set('Ext.ux.form.TwinComboBox',
 sfConfig::set('Ext.ux.form.MultiSelect',
   array(
     'class'       => 'Ext.ux.form.MultiSelect',
+    'attributes'  => array()
+  )
+);
+
+sfConfig::set('Ext.ux.form.ItemSelector',
+  array(
+    'class'       => 'Ext.ux.form.ItemSelector',
     'attributes'  => array()
   )
 );
