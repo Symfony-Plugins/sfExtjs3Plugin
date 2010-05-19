@@ -96,6 +96,7 @@ sfConfig::set('sf_extjs3_classes',
     'DateField'               => 'Ext.form.DateField',
     'TwinDateField'           => 'Ext.ux.form.TwinDateField', // ux must be manually included
     'TextField'               => 'Ext.form.TextField',
+    'TextArea'                => 'Ext.form.TextArea',
     'TimeField'               => 'Ext.form.TimeField',
     'HtmlEditor'              => 'Ext.form.HtmlEditor',
     'ComboBox'                => 'Ext.form.ComboBox',
@@ -334,6 +335,13 @@ sfConfig::set('Ext.ux.form.TwinDateField',
 sfConfig::set('Ext.form.TextField',
   array(
     'class'       => 'Ext.form.TextField',
+    'attributes'  => array()
+  )
+);
+
+sfConfig::set('Ext.form.TextArea',
+  array(
+    'class'       => 'Ext.form.TextArea',
     'attributes'  => array()
   )
 );
