@@ -5,6 +5,7 @@ sfConfig::set('sf_extjs3_comment', true);
 # adapters
 #
 sfConfig::set('sf_extjs3_default_adapter', 'ext');
+
 sfConfig::set('sf_extjs3_adapters', array(
   'jquery' => array(
     'adapter/jquery/jquery.js', 
@@ -21,7 +22,7 @@ sfConfig::set('sf_extjs3_adapters', array(
     'adapter/yui/ext-yui-adapter.js'
   ), 
   'ext' => array(
-    'adapter/ext/ext-base.js' //-debug
+    'adapter/ext/ext-base' . ((sfConfig::get('sf_environment') == 'dev') ? '-debug' : '' ). '.js'
   )
 ));
 #

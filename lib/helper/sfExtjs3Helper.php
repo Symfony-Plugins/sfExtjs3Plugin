@@ -409,7 +409,7 @@ class sfExtjs3Plugin {
     }
 
     // add javascript sources for ext all
-    $debug = (sfConfig::get('sf_web_debug', false)) ? '-debug' : ''; // if in web_debug mode, also use debug-extjs source
+    $debug = (sfConfig::get('sf_environment') == 'dev') ? '-debug' : ''; // if in web_debug mode, also use debug-extjs source
     $response->addJavascript(sfConfig::get('sf_extjs3_js_dir').'ext-all'.$debug.'.js', 'first');
 
     if (isset($this->addons['js']))
