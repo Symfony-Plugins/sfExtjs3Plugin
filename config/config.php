@@ -8,19 +8,19 @@ sfConfig::set('sf_extjs3_default_adapter', 'ext');
 
 sfConfig::set('sf_extjs3_adapters', array(
   'jquery' => array(
-    'adapter/jquery/jquery.js', 
-    'adapter/jquery/jquery-plugins.js', 
+    'adapter/jquery/jquery.js',
+    'adapter/jquery/jquery-plugins.js',
     'adapter/jquery/ext-jquery-adapter.js'
-  ), 
+  ),
   'prototype' => array(
-    'adapter/prototype/prototype.js', 
-    'adapter/prototype/scriptaculous.js?load=effects.js', 
+    'adapter/prototype/prototype.js',
+    'adapter/prototype/scriptaculous.js?load=effects.js',
     'adapter/prototype/ext-prototype-adapter.js'
-  ), 
+  ),
   'yui' => array(
-    'adapter/yui/yui-utilities.js', 
+    'adapter/yui/yui-utilities.js',
     'adapter/yui/ext-yui-adapter.js'
-  ), 
+  ),
   'ext' => array(
     'adapter/ext/ext-base' . ((sfConfig::get('sf_environment') == 'dev') ? '-debug' : '' ). '.js'
   )
@@ -30,7 +30,7 @@ sfConfig::set('sf_extjs3_adapters', array(
 #
 sfConfig::set('sf_extjs3_default_theme', 'aero');
 sfConfig::set('sf_extjs3_themes', array(
-  'aero' => array(), 
+  'aero' => array(),
   'gray' => array(
     'xtheme-gray.css'
   )
@@ -53,17 +53,17 @@ sfConfig::set('sf_extjs3_spacer', sfConfig::get('sf_extjs3_images_dir') . 'defau
 # attributes which must handled as array
 #
 sfConfig::set('sf_extjs3_list_attributes', array(
-  'items', 
-  'tbar', 
-  'bbar', 
-  'buttons', 
-  'plugins', 
-  'view', 
-  'fields', 
-  'tools', 
-  'actions', 
-  'data', 
-  'multiselects', 
+  'items',
+  'tbar',
+  'bbar',
+  'buttons',
+  'plugins',
+  'view',
+  'fields',
+  'tools',
+  'actions',
+  'data',
+  'multiselects',
   'columns'
 ));
 
@@ -72,31 +72,32 @@ sfConfig::set('sf_extjs3_list_attributes', array(
 #
 sfConfig::set('sf_extjs3_quote_except', array(
   'key' => array(
-    'renderer', 
-    'store', 
-    'defaults', 
-    'plugins', 
-    'cm', 
-    'ds', 
-    'view', 
-    'tbar', 
-    'bbar', 
-    'scope', 
-    'key', 
-    'parentPanel', 
+    'renderer',
+    'store',
+    'defaults',
+    'plugins',
+    'cm',
+    'ds',
+    'view',
+    'tbar',
+    'bbar',
+    'scope',
+    'key',
+    'parentPanel',
     'handler'
-  ), 
+  ),
   'value' => array(
-    'true', 
-    'false', 
-    'new Ext.', 
-    'function', 
-    'Ext.', 
-    '__(', 
-    '{', 
+    'true',
+    'false',
+    'new Ext.',
+    'function ',
+    'function(',
+    'Ext.',
+    '__(',
+    '{',
     'this.'
   )
-));//'value' => array('true', 'false', 'new', 'function', 'Ext.', '__(', '{', 'this.')
+));
 
 
 #
@@ -104,57 +105,57 @@ sfConfig::set('sf_extjs3_quote_except', array(
 #
 sfConfig::set('sf_extjs3_classes', array_merge(array(
   // data
-  'JsonReader' => 'Ext.data.JsonReader', 
-  'Store' => 'Ext.data.Store', 
-  'SimpleStore' => 'Ext.data.SimpleStore', 
-  'JsonStore' => 'Ext.data.JsonStore', 
-  'GroupingStore' => 'Ext.data.GroupingStore', 
-  'HttpProxy' => 'Ext.data.HttpProxy', 
-  'Template' => 'Ext.Template', 
-  'XTemplate' => 'Ext.XTemplate', 
+  'JsonReader' => 'Ext.data.JsonReader',
+  'Store' => 'Ext.data.Store',
+  'SimpleStore' => 'Ext.data.SimpleStore',
+  'JsonStore' => 'Ext.data.JsonStore',
+  'GroupingStore' => 'Ext.data.GroupingStore',
+  'HttpProxy' => 'Ext.data.HttpProxy',
+  'Template' => 'Ext.Template',
+  'XTemplate' => 'Ext.XTemplate',
   // widgets
-  'BoxComponent' => 'Ext.BoxComponent', 
-  'Button' => 'Ext.Button', 
-  'GridPanel' => 'Ext.grid.GridPanel', 
-  'ColumnModel' => 'Ext.grid.ColumnModel', 
-  'GridView' => 'Ext.grid.GridView', 
-  'GroupingView' => 'Ext.grid.GroupingView', 
-  'EditorGridPanel' => 'Ext.grid.EditorGridPanel', 
-  'RowSelectionModel' => 'Ext.grid.RowSelectionModel', 
-  'CheckboxSelectionModel' => 'Ext.grid.CheckboxSelectionModel', 
-  'Panel' => 'Ext.Panel', 
-  'TabPanel' => 'Ext.TabPanel', 
-  'FormPanel' => 'Ext.FormPanel', 
-  'Viewport' => 'Ext.Viewport', 
-  'Window' => 'Ext.Window', 
-  'FieldSet' => 'Ext.form.FieldSet', 
-  'Hidden' => 'Ext.form.Hidden', 
-  'DateField' => 'Ext.form.DateField', 
-  'TextField' => 'Ext.form.TextField', 
-  'TextArea' => 'Ext.form.TextArea', 
-  'NumberField' => 'Ext.form.NumberField', 
-  'TimeField' => 'Ext.form.TimeField', 
-  'HtmlEditor' => 'Ext.form.HtmlEditor', 
-  'ComboBox' => 'Ext.form.ComboBox', 
-  'Checkbox' => 'Ext.form.Checkbox', 
-  'Menu' => 'Ext.menu.Menu', 
-  'Item' => 'Ext.menu.Item', 
-  'TextItem' => 'Ext.menu.TextItem', 
-  'CheckItem' => 'Ext.menu.CheckItem', 
-  'Toolbar' => 'Ext.Toolbar', 
-  'MenuButton' => 'Ext.Toolbar.MenuButton', 
-  'Fill' => 'Ext.Toolbar.Fill', 
-  'Separator' => 'Ext.Toolbar.Separator', 
-  'Spacer' => 'Ext.Toolbar.Spacer', 
-  'PagingToolbar' => 'Ext.PagingToolbar', 
-  'MessageBox' => 'Ext.MessageBox', 
-  'KeyMap' => 'Ext.KeyMap', 
+  'BoxComponent' => 'Ext.BoxComponent',
+  'Button' => 'Ext.Button',
+  'GridPanel' => 'Ext.grid.GridPanel',
+  'ColumnModel' => 'Ext.grid.ColumnModel',
+  'GridView' => 'Ext.grid.GridView',
+  'GroupingView' => 'Ext.grid.GroupingView',
+  'EditorGridPanel' => 'Ext.grid.EditorGridPanel',
+  'RowSelectionModel' => 'Ext.grid.RowSelectionModel',
+  'CheckboxSelectionModel' => 'Ext.grid.CheckboxSelectionModel',
+  'Panel' => 'Ext.Panel',
+  'TabPanel' => 'Ext.TabPanel',
+  'FormPanel' => 'Ext.FormPanel',
+  'Viewport' => 'Ext.Viewport',
+  'Window' => 'Ext.Window',
+  'FieldSet' => 'Ext.form.FieldSet',
+  'Hidden' => 'Ext.form.Hidden',
+  'DateField' => 'Ext.form.DateField',
+  'TextField' => 'Ext.form.TextField',
+  'TextArea' => 'Ext.form.TextArea',
+  'NumberField' => 'Ext.form.NumberField',
+  'TimeField' => 'Ext.form.TimeField',
+  'HtmlEditor' => 'Ext.form.HtmlEditor',
+  'ComboBox' => 'Ext.form.ComboBox',
+  'Checkbox' => 'Ext.form.Checkbox',
+  'Menu' => 'Ext.menu.Menu',
+  'Item' => 'Ext.menu.Item',
+  'TextItem' => 'Ext.menu.TextItem',
+  'CheckItem' => 'Ext.menu.CheckItem',
+  'Toolbar' => 'Ext.Toolbar',
+  'MenuButton' => 'Ext.Toolbar.MenuButton',
+  'Fill' => 'Ext.Toolbar.Fill',
+  'Separator' => 'Ext.Toolbar.Separator',
+  'Spacer' => 'Ext.Toolbar.Spacer',
+  'PagingToolbar' => 'Ext.PagingToolbar',
+  'MessageBox' => 'Ext.MessageBox',
+  'KeyMap' => 'Ext.KeyMap',
   // tree stuff
-  'TreePanel' => 'Ext.tree.TreePanel', 
-  'TreeLoader' => 'Ext.tree.TreeLoader', 
-  'Node' => 'Ext.data.Node', 
-  'TreeNode' => 'Ext.tree.TreeNode', 
-  'AsyncTreeNode' => 'Ext.tree.AsyncTreeNode', 
+  'TreePanel' => 'Ext.tree.TreePanel',
+  'TreeLoader' => 'Ext.tree.TreeLoader',
+  'Node' => 'Ext.data.Node',
+  'TreeNode' => 'Ext.tree.TreeNode',
+  'AsyncTreeNode' => 'Ext.tree.AsyncTreeNode',
   // base
   'Observable' => 'Ext.util.Observable'
 ), sfConfig::get('sf_extjs3_classes', array())));
@@ -168,42 +169,42 @@ sfConfig::set('sf_extjs3_classes', array_merge(array(
 # data
 #
 sfConfig::set('Ext.data.JsonReader', array(
-  'class' => 'Ext.data.JsonReader', 
+  'class' => 'Ext.data.JsonReader',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.data.Store', array(
-  'class' => 'Ext.data.Store', 
+  'class' => 'Ext.data.Store',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.data.SimpleStore', array(
-  'class' => 'Ext.data.SimpleStore', 
+  'class' => 'Ext.data.SimpleStore',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.data.JsonStore', array(
-  'class' => 'Ext.data.JsonStore', 
+  'class' => 'Ext.data.JsonStore',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.data.GroupingStore', array(
-  'class' => 'Ext.data.GroupingStore', 
+  'class' => 'Ext.data.GroupingStore',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.data.HttpProxy', array(
-  'class' => 'Ext.data.HttpProxy', 
+  'class' => 'Ext.data.HttpProxy',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Template', array(
-  'class' => 'Ext.Template', 
+  'class' => 'Ext.Template',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.XTemplate', array(
-  'class' => 'Ext.XTemplate', 
+  'class' => 'Ext.XTemplate',
   'attributes' => array()
 ));
 
@@ -211,203 +212,203 @@ sfConfig::set('Ext.XTemplate', array(
 # widgets
 #
 sfConfig::set('Ext.BoxComponent', array(
-  'class' => 'Ext.BoxComponent', 
+  'class' => 'Ext.BoxComponent',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Button', array(
-  'class' => 'Ext.Button', 
+  'class' => 'Ext.Button',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.GridPanel', array(
-  'class' => 'Ext.grid.GridPanel', 
+  'class' => 'Ext.grid.GridPanel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.ColumnModel', array(
-  'class' => 'Ext.grid.ColumnModel', 
+  'class' => 'Ext.grid.ColumnModel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.GridView', array(
-  'class' => 'Ext.grid.GridView', 
+  'class' => 'Ext.grid.GridView',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.GroupingView', array(
-  'class' => 'Ext.grid.GroupingView', 
+  'class' => 'Ext.grid.GroupingView',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.EditorGridPanel', array(
-  'class' => 'Ext.grid.EditorGridPanel', 
+  'class' => 'Ext.grid.EditorGridPanel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.RowSelectionModel', array(
-  'class' => 'Ext.grid.RowSelectionModel', 
+  'class' => 'Ext.grid.RowSelectionModel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.grid.CheckboxSelectionModel', array(
-  'class' => 'Ext.grid.CheckboxSelectionModel', 
+  'class' => 'Ext.grid.CheckboxSelectionModel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Panel', array(
-  'class' => 'Ext.Panel', 
+  'class' => 'Ext.Panel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.TabPanel', array(
-  'class' => 'Ext.TabPanel', 
+  'class' => 'Ext.TabPanel',
   'attributes' => array(
-    'resizeTabs' => true, 
-    'minTabWidth' => 100, 
-    'tabWidth' => 150, 
-    'activeTab' => 0, 
-    'enableTabScroll' => true, 
+    'resizeTabs' => true,
+    'minTabWidth' => 100,
+    'tabWidth' => 150,
+    'activeTab' => 0,
+    'enableTabScroll' => true,
     'defaults' => '{ autoScroll: true }'
   )
 ));
 
 sfConfig::set('Ext.FormPanel', array(
-  'class' => 'Ext.FormPanel', 
+  'class' => 'Ext.FormPanel',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Viewport', array(
-  'class' => 'Ext.Viewport', 
+  'class' => 'Ext.Viewport',
   'attributes' => array(
     'layout' => 'border'
   )
 ));
 
 sfConfig::set('Ext.Window', array(
-  'class' => 'Ext.Window', 
+  'class' => 'Ext.Window',
   'attributes' => array(
-    'constrain' => true, 
-    'layout' => 'fit', 
-    'width' => 500, 
-    'height' => 300, 
-    'closeAction' => 'hide', 
+    'constrain' => true,
+    'layout' => 'fit',
+    'width' => 500,
+    'height' => 300,
+    'closeAction' => 'hide',
     'plain' => true
   )
 ));
 
 sfConfig::set('Ext.form.FieldSet', array(
-  'class' => 'Ext.form.FieldSet', 
+  'class' => 'Ext.form.FieldSet',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.Hidden', array(
-  'class' => 'Ext.form.Hidden', 
+  'class' => 'Ext.form.Hidden',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.DateField', array(
-  'class' => 'Ext.form.DateField', 
+  'class' => 'Ext.form.DateField',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.TextField', array(
-  'class' => 'Ext.form.TextField', 
+  'class' => 'Ext.form.TextField',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.TextArea', array(
-  'class' => 'Ext.form.TextArea', 
+  'class' => 'Ext.form.TextArea',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.NumberField', array(
-  'class' => 'Ext.form.NumberField', 
+  'class' => 'Ext.form.NumberField',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.TimeField', array(
-  'class' => 'Ext.form.TimeField', 
+  'class' => 'Ext.form.TimeField',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.HtmlEditor', array(
-  'class' => 'Ext.form.HtmlEditor', 
+  'class' => 'Ext.form.HtmlEditor',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.ComboBox', array(
-  'class' => 'Ext.form.ComboBox', 
+  'class' => 'Ext.form.ComboBox',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.form.Checkbox', array(
-  'class' => 'Ext.form.Checkbox', 
+  'class' => 'Ext.form.Checkbox',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.menu.Menu', array(
-  'class' => 'Ext.menu.Menu', 
+  'class' => 'Ext.menu.Menu',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.menu.Item', array(
-  'class' => 'Ext.menu.Item', 
+  'class' => 'Ext.menu.Item',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.menu.TextItem', array(
-  'class' => 'Ext.menu.TextItem', 
+  'class' => 'Ext.menu.TextItem',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.menu.CheckItem', array(
-  'class' => 'Ext.menu.CheckItem', 
+  'class' => 'Ext.menu.CheckItem',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Toolbar', array(
-  'class' => 'Ext.Toolbar', 
+  'class' => 'Ext.Toolbar',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Toolbar.MenuButton', array(
-  'class' => 'Ext.Toolbar.MenuButton', 
+  'class' => 'Ext.Toolbar.MenuButton',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Toolbar.Fill', array(
-  'class' => 'Ext.Toolbar.Fill', 
+  'class' => 'Ext.Toolbar.Fill',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Toolbar.Separator', array(
-  'class' => 'Ext.Toolbar.Separator', 
+  'class' => 'Ext.Toolbar.Separator',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.Toolbar.Spacer', array(
-  'class' => 'Ext.Toolbar.Spacer', 
+  'class' => 'Ext.Toolbar.Spacer',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.PagingToolbar', array(
-  'class' => 'Ext.PagingToolbar', 
+  'class' => 'Ext.PagingToolbar',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.MessageBox', array(
-  'class' => 'Ext.MessageBox', 
+  'class' => 'Ext.MessageBox',
   'attributes' => array()
 ));
 
 sfConfig::set('Ext.KeyMap', array(
-  'class' => 'Ext.KeyMap', 
+  'class' => 'Ext.KeyMap',
   'attributes' => array()
 ));
 
 sfConfig::set('anonymousClass', array(
-  'class' => 'anonymousClass', 
+  'class' => 'anonymousClass',
   'attributes' => array()
 ));
 
